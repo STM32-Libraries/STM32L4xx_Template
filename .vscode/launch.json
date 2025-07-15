@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "cortex-debug",
+      "request": "launch",
+      "executable": "${workspaceFolder}/build/template_appl.out",
+      "servertype": "openocd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32l4x.cfg"
+      ],
+      "svdFile": "/home/marco/Tools/svd/STM32L4_svd_v1r4/STM32L4x2.svd",
+      "preLaunchTask": "build-project",
+      "runToMain": true,
+      "preLaunchCommands": [
+        "monitor reset halt"
+      ]
+    }
+  ]
+}
